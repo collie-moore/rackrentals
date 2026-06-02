@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RackRandezvous Rentals - Rent-a-Shelf in Nairobi</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand: #C41860;
+      --brand-dark: #8f1044;
+      --light: #fdf5f8;
+      --text: #1a1a1a;
+      --muted: #666;
+    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background: #fff; }
+
+    /* NAV */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 40px; background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      position: sticky; top: 0; z-index: 100;
+    }
+    nav .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    nav .logo img { height: 48px; border-radius: 8px; }
+    nav .logo span { font-size: 1.1rem; font-weight: 700; color: var(--brand); letter-spacing: 0.5px; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul a { text-decoration: none; color: var(--text); font-size: 0.95rem; transition: color .2s; }
+    nav ul a:hover { color: var(--brand); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--light) 0%, #fff 60%, #fce4ef 100%);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; text-align: center;
+      padding: 80px 24px;
+    }
+    .hero img { width: 160px; height: 160px; object-fit: contain; border-radius: 24px; box-shadow: 0 8px 32px rgba(196,24,96,0.18); margin-bottom: 32px; }
+    .hero h1 { font-size: 2.6rem; font-weight: 800; color: var(--brand); line-height: 1.15; }
+    .hero p { font-size: 1.15rem; color: var(--muted); max-width: 560px; margin: 16px auto 32px; line-height: 1.7; }
+    .btn {
+      display: inline-block; background: var(--brand); color: #fff;
+      padding: 14px 32px; border-radius: 8px; font-size: 1rem;
+      font-weight: 600; text-decoration: none; transition: background .2s;
+    }
+    .btn:hover { background: var(--brand-dark); }
+
+    /* FEATURES */
+    .features { padding: 72px 40px; background: #fff; }
+    .features h2 { text-align: center; font-size: 1.8rem; color: var(--brand); margin-bottom: 48px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; max-width: 960px; margin: 0 auto; }
+    .card {
+      background: var(--light); border-radius: 16px; padding: 32px 28px;
+      flex: 1 1 260px; max-width: 300px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .card .icon { font-size: 2.4rem; margin-bottom: 16px; }
+    .card h3 { font-size: 1.1rem; color: var(--brand); margin-bottom: 10px; }
+    .card p { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
+
+    /* HOW IT WORKS */
+    .how { background: var(--light); padding: 72px 40px; text-align: center; }
+    .how h2 { font-size: 1.8rem; color: var(--brand); margin-bottom: 48px; }
+    .steps { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 800px; margin: 0 auto; }
+    .step { flex: 1 1 200px; max-width: 220px; }
+    .step .num { width: 48px; height: 48px; border-radius: 50%; background: var(--brand); color: #fff; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    .step h4 { font-size: 0.98rem; color: var(--text); margin-bottom: 8px; }
+    .step p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    /* FOOTER */
+    footer {
+      background: var(--brand); color: #fff;
+      padding: 40px 40px 24px;
+      text-align: center;
+    }
+    footer .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    footer .footer-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; }
+    footer .footer-links a:hover { color: #fff; text-decoration: underline; }
+    footer p { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+
+    @media (max-width: 600px) {
+      nav { padding: 14px 20px; }
+      nav ul { gap: 16px; }
+      .hero h1 { font-size: 1.8rem; }
+      .features, .how { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="index.html">
+      <img src="rr.jpeg" alt="RackRandezvous Rentals Logo" />
+      <span>RackRandezvous Rentals</span>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms-of-service.html">Terms of Service</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <img src="rr.jpeg" alt="RackRandezvous Rentals" />
+    <h1>Rent a Shelf in Nairobi</h1>
+    <p>Premium shelf and display space rental for entrepreneurs, boutiques, and makers in Nairobi. Showcase your products without the overhead of a full store.</p>
+    <a href="https://wa.me/254706260151" class="btn">Get Started on WhatsApp</a>
+  </section>
+
+  <section class="features">
+    <h2>Why RackRandezvous?</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">&#128722;</div>
+        <h3>Flexible Shelf Space</h3>
+        <p>Rent a shelf, rack, or display unit by the week or month — no long-term leases required.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128205;</div>
+        <h3>Prime Nairobi Locations</h3>
+        <p>Strategically located spaces that attract foot traffic and help your products get noticed.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128241;</div>
+        <h3>WhatsApp Powered</h3>
+        <p>Manage your bookings, payments, and updates instantly through WhatsApp — fast and convenient.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128200;</div>
+        <h3>Grow Your Brand</h3>
+        <p>Ideal for small businesses, crafters, and side hustles looking to reach more customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>Browse Available Spaces</h4>
+        <p>Message us on WhatsApp to see current shelf availability and pricing.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>Book &amp; Pay</h4>
+        <p>Reserve your space and complete payment securely via M-Pesa or bank transfer.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>Set Up &amp; Sell</h4>
+        <p>Arrange your products on your shelf and start selling to walk-in customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="mailto:moorecollins6@gmail.com">Contact Us</a>
+    </div>
+    <p>&copy; 2024 RackRandezvous Rentals. All rights reserved. Nairobi, Kenya.</p>
+  </footer>
+
+</body>
+</html>
